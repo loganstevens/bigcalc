@@ -1,0 +1,112 @@
+/* Do not remove this rule */
+
+html {
+    font-size: 1rem;
+    /* margin: 1.5rem; */
+    background-color: rgb(249, 232, 209);
+
+    /* border-color: rgb(155, 37, 37); */
+    /* padding: 0.5rem; */
+}
+
+body {
+    font-family: 'Mooli', sans-serif;
+    background-color: silver;
+    background-image: url(https://hard-drive.net/wp-content/uploads/2021/02/virtual-boy.jpg.webp);
+    background-size: 50% 50%; /* Try cover, auto auto */
+    background-repeat: no-repeat; /* Try repeat-y, no-repeat, repeat */
+    background-attachment: fixed; /* Try scroll */
+    background-position: center; /* Try top, right, bottom, left */
+
+    padding: 2.5rem;
+    padding-bottom: 50rem;
+    border-color: blue;
+    border-width: 0.85rem;
+    border-style: groove;
+    
+}
+
+h1, h2 {
+    text-decoration: underline;
+}
+
+p {
+ color: rgb(155, 37, 37);
+}
+
+table, td {
+    border: .1rem solid gray
+}
+
+th {
+    color: rgb(155, 37, 37);
+    background-color: rgb(249, 232, 209);
+    border: .1rem solid gray
+}
+
+.custom-one::first-letter {
+    font-weight: bold;
+    font-size: 4rem;
+    color: rgb(155, 37, 37);
+}
+
+.custom-two {
+    color: black;
+}
+
+.logo {
+    max-width: 8rem;
+    height: auto;
+}
+.cs-text {
+    /* object-fit: fill; */
+    height: 5.5rem;
+    width: 40rem;
+}
+
+#calculator {
+    width: 200px;
+    margin: auto;
+}
+#display {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+}
+#buttons button {
+    width: 48px;
+    height: 40px;
+    margin: 1px;
+}
+
+.number-button {
+    background-color: #e7f2fd;
+}
+
+.operation-button {
+    background-color: #fee2b3;
+}
+
+.memory-button {
+    background-color: #e0e0ff;
+}
+
+.control-button {
+    background-color: #b3e2d6;
+}
+
+.number-button:hover {
+    background-color: #d1e7fb;
+}
+
+.operation-button:hover {
+    background-color: #fddba7;
+}
+
+.memory-button:hover {
+    background-color: #cfcfff;
+}
+
+.control-button:hover {
+    background-color: #a1d6c9;
+}

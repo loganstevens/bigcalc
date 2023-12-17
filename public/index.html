@@ -1,0 +1,70 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Big Calculator</title>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="bigCalc.css">
+</head>
+<body>
+    <div id="calculator">
+        <input type="text" id="display" value="0" disabled>
+        <div id="buttons">
+            <!-- Numeric buttons -->
+            <button id="button0" class="number-button" onclick="addToDisplay('0')">0</button>
+			<button id="button1" class="number-button" onclick="addToDisplay('1')">1</button>
+			<button id="button2" class="number-button" onclick="addToDisplay('2')">2</button>
+			<button id="button3" class="number-button" onclick="addToDisplay('3')">3</button>
+			<button id="button4" class="number-button" onclick="addToDisplay('4')">4</button>
+			<button id="button5" class="number-button" onclick="addToDisplay('5')">5</button>
+			<button id="button6" class="number-button" onclick="addToDisplay('6')">6</button>
+			<button id="button7" class="number-button" onclick="addToDisplay('7')">7</button>
+			<button id="button8" class="number-button" onclick="addToDisplay('8')">8</button>
+			<button id="button9" class="number-button" onclick="addToDisplay('9')">9</button>
+            <button id="leftParen" class="number-button" onclick="addToDisplay('(')">(</button>
+            <button id="rightParen" class="number-button" onclick="addToDisplay(')')">)</button>
+
+            <!-- Operation buttons -->
+            <button id="buttonPlus" class="operation-button" onclick="addToDisplay('+')">+</button>
+			<button id="buttonMinus" class="operation-button" onclick="addToDisplay('-')">-</button>
+			<button id="buttonMultiply" class="operation-button" onclick="addToDisplay('*')">*</button>
+			<button id="buttonDivide" class="operation-button" onclick="addToDisplay('/')">/</button>
+            <!-- <button class="operation-button" onclick="squareRoot()">√</button> -->
+			<button class="operation-button" onclick="addToDisplay('√(')">√</button>
+			<button class="operation-button" onclick="addToDisplay('^')">^</button>
+			<button class="operation-button" onclick="addToDisplay('sin(')">sin</button>
+			<button class="operation-button" onclick="addToDisplay('cos(')">cos</button>
+			<button class="operation-button" onclick="addToDisplay('tan(')">tan</button>
+			<button class="operation-button" onclick="togglePlusMinus()">±</button>
+			<button class="operation-button" onclick="addToDisplay('log(')">log</button>
+			<button class="operation-button" onclick="addToDisplay('ln(')">ln</button>
+			<button class="operation-button" onclick="addToDisplay('π')">π</button>
+			<button class="operation-button" onclick="addToDisplay('e')">e</button>
+			<button class="operation-button" onclick="calculateFactorial()">n!</button>
+			<button class="operation-button" onclick="addToDisplay('%')">%</button>
+
+            <!-- Memory and control buttons -->
+            <!-- <button class="memory-button" onclick="memoryStore()">MS</button> -->
+			<button class="memory-button" onclick="memoryStore(1)">M+</button>
+            <button class="memory-button" onclick="memoryStore(2)">M-</button>
+            <button class="memory-button" onclick="memoryRecall(0)">MR</button>
+            <button class="memory-button" onclick="memoryClear()">MC</button>
+
+			<button id="buttonDecimal" class="control-button" onclick="addToDisplay('.')">.</button>
+            <button id="buttonEquals" class="control-button" onclick="calculate()">=</button>
+			<button id="buttonClear" class="control-button" onclick="clearDisplay()">AC</button>
+        </div>
+		<div id="currencyConverter">
+			<!-- <input type="number" id="amount" placeholder="Amount"> -->
+			<p>From: </p><input type="text" id="fromCurrency" placeholder="USD"><br>
+			<p>To: </p><input type="text" id="toCurrency" placeholder="EUR"><br>
+			<!-- <button onclick="convertCurrency()">Convert</button> -->
+			<p id="conversionResult"></p>
+		</div>
+		<div id="errorMessage"></div>
+    </div>
+
+    <script src="bigCalcNav.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+body {
+    /* font-family: 'Arial', sans-serif; */
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f7fa;
+    margin: 0;
+    background: linear-gradient(270deg, #003973, #aeae8a, #2C3E50, #aa4843, #316491, #482847);
+    background-size: 1200% 1200%;
+
+    -webkit-animation: GradientAnimation 90s ease infinite; /* Increased duration */
+    -moz-animation: GradientAnimation 90s ease infinite;
+    animation: GradientAnimation 90s ease infinite; /* Increased duration */
+}
+
+p {
+    color: black;
+    padding: 0rem;
+    margin: 0rem;
+    size: 3rem;
+}
+
+#calculator {
+    background-color: #b1b1b161;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    box-sizing: border-box; /* Include padding and border in the element's width and height */
+    width: auto;
+}
+
+#display, #amount, #fromCurrency, #toCurrency {
+    width: 100%;
+    margin: 0rem;
+    margin-bottom: 1rem;
+    /* padding: 0.75rem; */
+
+    box-sizing: border-box; /* Include padding and border */
+    text-align: right;
+    
+    border: 2px solid #e4e4e4;
+    border-radius: 0.5rem;
+    font-size: 1.25rem;
+    background-color: #f8f8f8;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#fromCurrency, #toCurrency {
+    text-align: left;
+}
+
+#buttons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+}
+
+#currencyConverter {
+    margin: 2rem;
+}
+
+#buttons button {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border: none;
+    /* box-shadow: 0.125rem 0.125rem 0.25rem rgba(190, 190, 190, 0.6), -0.125rem -0.125rem 0.25rem rgba(255, 255, 255, 0.9); /* Lighter shadows */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+#conversionResult {
+    color: red;
+}
+
+/* #errorMessage {
+    color: red;
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: bold;
+    display: none;
+} */
+
+#errorMessage {
+    color: red;
+    background-color: rgba(105, 0, 0, 0.85); /* Dark red background */
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: bold;
+    height: 2rem; /* Fixed height for the error message */
+    line-height: 2rem; /* Center the text vertically */
+    border-radius: 0.5rem;
+    overflow: hidden; /* Ensures text does not overflow */
+    visibility: hidden; /* Initially hidden but space reserved */
+    opacity: 0; /* Make it transparent */
+    transition: visibility 0s, opacity 0.5s linear; /* Smooth transition for visibility and opacity */
+}
+
+#buttons button:hover {
+    color: white;
+    background: linear-gradient(145deg, rgba(64, 64, 64, 0.9), rgba(100, 100, 100, 0.9));
+    box-shadow: 0.0625rem 0.0625rem 0.125rem rgba(50, 50, 50, 0.6), -0.0625rem -0.0625rem 0.125rem rgba(114, 114, 114, 0.9);
+    transform: translateY(-0.0625rem);
+}
+
+#buttons button:active {
+    background: linear-gradient(145deg, rgba(50, 50, 50, 0.7), rgba(80, 80, 80, 0.7));
+    box-shadow: inset 0.0625rem 0.0625rem 0.125rem rgba(190, 190, 190, 0.6), inset -0.0625rem -0.0625rem 0.125rem rgba(255, 255, 255, 0.9);
+}
+
+#buttons button:disabled {
+    background-color: #f9f9f9;
+    color: #ccc;
+    cursor: default;
+}
+
+.number-button {
+    background-color: rgba(127, 219, 218, 0.7);
+    /* background: linear-gradient(145deg, #69c7c5, #85e3e0);
+    box-shadow: 5px 5px 15px #5bb0ad, -5px -5px 15px #9be7e4; */
+}
+
+.operation-button {
+    background-color: rgba(255, 171, 76, 0.7);
+    /* background: linear-gradient(145deg, #e89c39, #ffc77a);
+    box-shadow: 5px 5px 15px #cf8b36, -5px -5px 15px #ffc987; */
+}
+
+.memory-button {
+    background-color: rgba(247, 127, 108, 0.7);
+    /* background: linear-gradient(145deg, #e3665a, #f98a84);
+    box-shadow: 5px 5px 15px #c35953, -5px -5px 15px #fba09b; */
+}
+
+.control-button {
+    background-color: rgba(154, 214, 108, 0.7);
+    /* background: linear-gradient(145deg, #80b959, #a6de83);
+    box-shadow: 5px 5px 15px #6da748, -5px -5px 15px #b9e397; */
+}
+
+@media (max-width: 600px) {
+    #calculator {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    #display, #amount, #fromCurrency, #toCurrency {
+        font-size: 1rem;
+    }
+
+    #buttons button {
+        font-size: 0.8rem;
+    }
+}
+
+@-webkit-keyframes GradientAnimation { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes GradientAnimation { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes GradientAnimation { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}

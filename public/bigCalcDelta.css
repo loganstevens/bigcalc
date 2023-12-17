@@ -1,0 +1,86 @@
+/* Do not remove this rule */
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+#calculator {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+#display {
+    width: 100%;
+    height: 3rem;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    text-align: right;
+}
+
+#buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+#buttons button {
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#buttons button:hover {
+    background-color: #e0e0e0;
+}
+
+#buttons button:disabled {
+    background-color: #f9f9f9;
+    color: #ccc;
+    cursor: default;
+}
+
+.number-button {
+    background-color: #e7f2fd;
+}
+
+.operation-button {
+    background-color: #fee2b3;
+}
+
+.memory-button {
+    background-color: #e0e0ff;
+}
+
+.control-button {
+    background-color: #b3e2d6;
+}
+
+.number-button:hover {
+    background-color: #d1e7fb;
+}
+
+.operation-button:hover {
+    background-color: #fddba7;
+}
+
+.memory-button:hover {
+    background-color: #cfcfff;
+}
+
+.control-button:hover {
+    background-color: #a1d6c9;
+}
