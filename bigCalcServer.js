@@ -1,7 +1,5 @@
 // bigCalcServer.js \ server
 
-//API Key: cfd538ce112f0ca5414253a9
-//Example Request: https://v6.exchangerate-api.com/v6/cfd538ce112f0ca5414253a9/latest/USD
 const express = require('express');
 const path = require('path');
 
@@ -12,7 +10,7 @@ if (process.argv.length != 3) {
     console.log("Usage bigCalc.js portNumber");
 }
 
-const API_KEY = 'cfd538ce112f0ca5414253a9';
+const API_KEY = process.env.API_KEY || 'cfd538ce112f0ca5414253a9';
 
 class calcSupport {
     static #order;
@@ -48,8 +46,9 @@ class calcSupport {
 require("dotenv").config({ path: path.resolve(__dirname, '.env') });  
 const uri = process.env.MONGO_CONNECTION_STRING;
 
-MONGO_DB_NAME = "CMSC335_DB"
-MONGO_COLLECTION = "bigCalc"
+const MONGO_DB_NAME = process.env.MONGO_DB_NAME || "CMSC335_DB";
+const MONGO_COLLECTION = process.env.MONGO_COLLECTION || "bigCalc";
+
 const databaseAndCollection = {db: MONGO_DB_NAME, collection: MONGO_COLLECTION};
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
